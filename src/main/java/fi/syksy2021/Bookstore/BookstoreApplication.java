@@ -22,22 +22,22 @@ public class BookstoreApplication {
 		SpringApplication.run(BookstoreApplication.class, args);
 	}
 	
-	@Bean
-	public CommandLineRunner Bookstore(BookRepository brepository, CategoryRepository crepository) {
-		return (args) -> {
-			log.info("save a couple of books");
-			crepository.save(new Category("Fantasy"));
-			crepository.save(new Category("Sci-Fi"));
-			crepository.save(new Category("Romance"));
-			
-			brepository.save(new Book("Antti Tuuri", "Uuni", 2010, "123abc", crepository.findByName("Fantasy").get(0)));
-			brepository.save(new Book("Tove Jansson", "Muumit", 1975, "234bca", crepository.findByName("Fantasy").get(0)));	
-			
-			//log.info("fetch all books");
-			for (Book book : brepository.findAll()) {
-				log.info(book.toString());
-			}
-
-		};
-	}
+//	@Bean
+//	public CommandLineRunner Bookstore(BookRepository brepository, CategoryRepository crepository) {
+//		return (args) -> {
+//			log.info("save a couple of books");
+//			crepository.save(new Category("Fantasy"));
+//			crepository.save(new Category("Sci-Fi"));
+//			crepository.save(new Category("Romance"));
+//			
+//			brepository.save(new Book("Antti Tuuri", "Uuni", 2010, "123abc", crepository.findByName("Fantasy").get(0)));
+//			brepository.save(new Book("Tove Jansson", "Muumit", 1975, "234bca", crepository.findByName("Fantasy").get(0)));	
+//			
+//			//log.info("fetch all books");
+//			for (Book book : brepository.findAll()) {
+//				log.info(book.toString());
+//			}
+//
+//		};
+//	}
 }

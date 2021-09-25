@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import fi.haagahelia.course.domain.Student;
 import fi.syksy2021.Bookstore.domain.Book;
 import fi.syksy2021.Bookstore.domain.BookRepository;
 import fi.syksy2021.Bookstore.domain.CategoryRepository;
